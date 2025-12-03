@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8" />
+    <title>Monitoring Tambak Udang</title>
+    <link rel="stylesheet" href="dashboard.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header class="header">
+    <h1>Dashboard Monitoring Kualitas Air Tambak Udang</h1>
+</header>
+
+<!-- Bagian 4 Grafik -->
+<section class="chart-grid">
+    <div class="chart-box">
+        <h3>Ammonia (NH3)</h3>
+        <img src="Assets/Timeseries NH3.jpeg" alt="Grafik NH3" />
+        <p class="desc">
+            Kadar rata-rata NH3 sepanjang tahun 2025 bersifat stabil tetapi sangat fluktuatif, berada di kisaran 0.12–0.18. Pola naik-turun harian ini mencerminkan dinamika kondisi lingkungan tambak yang berubah dari waktu ke waktu.
+        </p>
+    </div>
+
+    <div class="chart-box">
+        <h3>Dissolved Oxygen (DO)</h3>
+        <img src="assets/Timeseries DO.jpeg" alt="Grafik DO" />
+        <p class="desc">
+            Rata-rata pengukuran Oksigen Terlarut (DO - Dissolved Oxygen) umumnya stabil antara 5.2 dan 5.8 ppm, namun sempat mengalami penurunan signifikan di bawah 5.0 ppm pada pertengahan tahun dan mencapai puncaknya di atas 6.0 ppm sekitar September 2025.
+        </p>
+    </div>
+
+    <div class="chart-box">
+        <h3>pH</h3>
+        <img src="assets/Timeseries pH.jpeg" alt="Grafik pH" />
+        <p class="desc">
+            Rata-rata pengukuran pH (keasaman air) berfluktuasi secara konsisten antara sekitar 7.0 dan 7.6 sepanjang tahun 2025, menunjukkan tingkat pH cenderung netral hingga sedikit basa.
+        </p>
+    </div>
+
+    <div class="chart-box">
+        <h3>Kematian</h3>
+        <img src="assets/Timeseries kematian .jpeg" alt="Grafik Kematian" />
+        <p class="desc">
+            Tingkat Mortalitas yang Dikoreksi (Mortality_Corrected) menunjukkan variasi harian yang cukup tinggi, dengan nilai umumnya berkisar antara 0.06 hingga sedikit di atas 0.09 sepanjang periode Januari hingga September 2025.
+        </p>
+    </div>
+</section>
+
+<!-- Bagian 3 Grafik -->
+<section class="chart-grid">
+    <div class="chart-box">
+        <h3>Ammonia (NH3)</h3>
+        <img src="assets/Regresi NH3.jpeg" alt="Grafik Salinitas" />
+        <p class="desc">
+            Grafik menunjukkan korelasi positif yang jelas, artinya semakin tinggi kadar Amonia (Avg_NH3), semakin tinggi pula tingkat kematian yang dikoreksi (Mortality_Corrected).
+        </p>
+    </div>
+    <div class="chart-box">
+        <h3>Dissolved Oxygen (DO)</h3>
+        <img src="assets/Regresi DO.jpeg" alt="Grafik Kekeruhan" />
+        <p class="desc">
+            Grafik menunjukkan korelasi negatif yang cukup kuat, artinya semakin tinggi kadar Oksigen Terlarut (Avg_DO), semakin rendah tingkat kematian yang dikoreksi (Mortality_Corrected).
+        </p>
+    </div>
+    <div class="chart-box">
+        <h3>pH</h3>
+        <img src="assets/Regresi pH.jpeg" alt="Grafik Mortalitas" />
+        <p class="desc">
+            Grafik menunjukkan korelasi negatif yang lemah, di mana tingkat kematian cenderung sedikit menurun seiring dengan peningkatan nilai pH (air menjadi lebih basa).
+        </p>
+    </div>
+</section>
+<div class="powerbi-container">
+    <iframe 
+        title="Dashboard Power BI"
+        width="100%" 
+        height="700" 
+        src="https://app.powerbi.com/groups/me/reports/fae2e159-7396-407f-b88e-7710c0d403e3/0f0d24696657cd199358?experience=power-bi" 
+        frameborder="0" 
+        allowFullScreen="true">
+    </iframe>
+</div>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Shrimp Pond Water-Quality Monitor</title>
+  <link href="style.css" rel="stylesheet" />
+  <script defer src="main.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <div class="logo">🌊</div>
+        <div class="brand-text">
+          <h1 class="logo-title">AquaMonitor</h1>
+        </div>
+      </div>
+      <nav class="main-nav">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="predictor.html" class="nav-link">Predictor</a>
+        <a href="dashboard.html" class="nav-link">Dashboard</a>
+        <a href="us.html" class="nav-link">About Us</a>
+      </nav>
+    </div>
+  </header>
+
+
+<script src="dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+body {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    background: url("assets/bg.jpg") no-repeat center center fixed;
+    background-size: cover;
+    backdrop-filter: blur(6px);
+    color: #1b2a4e;
+}
+
+.header {
+    padding: 28px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.8);
+    font-weight: 600;
+    border-bottom: 2px solid #e3e8f0;
+}
+
+.chart-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 22px;
+    row-gap: 28px;
+    padding: 40px;
+}
+
+.chart-grid:nth-of-type(2) {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.chart-box {
+    background: white;
+    padding: 18px;
+    border-radius: 18px;
+    box-shadow: 0px 4px 14px rgba(0,0,0,0.1);
+    transition: 0.25s;
+}
+
+.chart-box:hover {
+    transform: translateY(-5px);
+}
+
+.chart-box img {
+    width: 100%;
+    height: 260px;
+    border-radius: 16px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.chart-box h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.desc {
+    font-size: 14px;
+    color: #3a485d;
+    margin-top: 6px;
+    text-align: justify;
+}
+.top-nav {
+    width: 100%;
+    padding: 14px 32px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 28px;
+
+    background: rgba(255,255,255,0.65);
+    backdrop-filter: blur(6px);
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.top-nav a {
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    color: #5f7ca5;
+    font-size: 16px;
+    font-weight: 500;
+    transition: 0.25s ease;
+}
+
+.top-nav a:hover {
+    color: #0c4c7b;
+}

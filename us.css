@@ -1,0 +1,157 @@
+/* GLOBAL */
+body {
+    margin: 0;
+    font-family: "Inter", sans-serif;
+    background-color: #E7F3FF;
+    color: #0B2B5B;
+}
+
+/* SOCIAL SECTION */
+.social-section {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.social-section h2 {
+    font-size: 26px;
+    margin-bottom: 25px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 22px;
+}
+
+.icon {
+    font-size: 32px;
+    padding: 14px;
+    border-radius: 50%;
+    background: white;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.13);
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.icon:hover {
+    background: #FFA94D;
+    color: white;
+    transform: translateY(-5px) scale(1.08);
+}
+
+/* PROMO CARDS */
+.promo-cards {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    padding: 50px 20px;
+}
+
+.card {
+    background: white;
+    width: 290px;
+    padding: 15px;
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+    transition: 0.3s;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+.card h3 {
+    margin-top: 18px;
+    font-size: 20px;
+}
+
+.card p {
+    font-size: 14px;
+    color: #123A6F;
+}
+
+.card a {
+    text-decoration: none;
+    font-weight: 600;
+    color: #0B2B5B;
+    margin-top: 10px;
+    display: inline-block;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.17);
+}
+
+/* FOOTER */
+.footer {
+    background: #0B2B5B;
+    color: white;
+    padding: 60px 40px 20px;
+    margin-top: 40px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+}
+
+.footer-section h4 {
+    margin-bottom: 15px;
+}
+
+.footer-section a {
+    display: block;
+    color: #E7F3FF;
+    margin-bottom: 8px;
+    text-decoration: none;
+}
+
+.footer-section a:hover {
+    color: #FFA94D;
+}
+
+.footer-social .icon {
+    background: transparent;
+    color: white;
+    border: 1px solid white;
+}
+
+.footer-social .icon:hover {
+    background: #FFA94D;
+    border-color: #FFA94D;
+}
+
+.newsletter input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    margin-bottom: 10px;
+}
+
+.newsletter button {
+    width: 120px;
+    padding: 10px;
+    background: #FFA94D;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    color: #0B2B5B;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.newsletter button:hover {
+    background: #ff8c13;
+}
+
+copyright {
+    text-align: center;
+    display: block;
+    margin-top: 20px;
+    font-size: 14px;
+    opacity: 0.7;
+}

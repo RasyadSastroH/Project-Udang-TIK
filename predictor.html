@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Mortality Risk Predictor</title>
+  <link href="style.css" rel="stylesheet" />
+  <script defer src="predictor.js"></script>
+</head>
+<body>
+    <head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Shrimp Pond Water-Quality Monitor</title>
+  <link href="style.css" rel="stylesheet" />
+  <script defer src="main.js"></script>
+</head>
+  <header class="site-header small">
+    <div class="container header-inner">
+      <div class="brand">
+        <div class="logo">❗</div>
+        <div class="brand-text">
+          <h1 class="logo-title">Predictor</h1>
+        </div>
+      </div>
+      <nav class="main-nav">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="predictor.html" class="nav-link">Predictor</a>
+        <a href="dashboard.html" class="nav-link">Dashboard</a>
+        <a href="us.html" class="nav-link">About Us</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="container predictor-grid">
+      <div class="predictor-left card">
+        <h2>Input Parameters</h2>
+
+        <div class="input-row">
+          <label>pH Level <span class="small">Optimal: 7.0 - 8.5</span></label>
+          <input type="range" id="phRange" min="5.0" max="10.0" step="0.1" value="7.5" />
+          <input type="number" id="phNumber" min="5.0" max="10.0" step="0.1" value="7.5" />
+        </div>
+
+        <div class="input-row">
+          <label>Dissolved Oxygen (DO) <span class="small">Optimal: > 4.0 mg/L</span></label>
+          <input type="range" id="doRange" min="0.0" max="12.0" step="0.1" value="5.8" />
+          <input type="number" id="doNumber" min="0.0" max="12.0" step="0.1" value="5.8" />
+        </div>
+
+        <div class="input-row">
+          <label>Ammonia (NH3) <span class="small">Optimal: &lt; 0.05 mg/L</span></label>
+          <input type="range" id="nh3Range" min="0.0" max="1.0" step="0.01" value="0.04" />
+          <input type="number" id="nh3Number" min="0.0" max="1.0" step="0.01" value="0.04" />
+        </div>
+
+        <button id="runPrediction" class="btn btn-primary wide">↗ Run Prediction</button>
+      </div>
+
+      <div class="predictor-right card result-card" id="resultCard">
+        <div class="result-empty">
+          <div class="result-icon">❕</div>
+          <h3>No prediction yet</h3>
+          <p>Adjust parameters and run prediction</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="container algorithm card algorithm-card">
+      <h3>Prediction Algorithm</h3>
+      <ol>
+        <li><strong>Priority 1: NH3 &gt; 0.05 mg/L</strong><br><small>NH3 is the highest mortality risk factor</small></li>
+        <li><strong>Priority 2: DO &lt; 4.0 mg/L</strong><br><small>DO is earliest mortality factor</small></li>
+        <li><strong>Priority 3: pH &lt; 7 or pH &gt; 8.5</strong><br><small>pH out of range causes mortality risk</small></li>
+      </ol>
+    </section>
+
+    <section class="container param-cards">
+      <div class="param card param-nh3">
+        <h4>NH3 (Ammonia)</h4>
+        <p><strong>Reason:</strong> Earliest predictor, increases toxicity exponentially</p>
+        <p class="impact">Impact: Gills damage, rapid death</p>
+      </div>
+
+      <div class="param card param-do">
+        <h4>DO (Dissolved Oxygen)</h4>
+        <p><strong>Reason:</strong> Low DO &lt; 4 mg/L accelerates NH3 impact</p>
+        <p class="impact">Impact: Acute stress</p>
+      </div>
+
+      <div class="param card param-ph">
+        <h4>pH (Acidity)</h4>
+        <p><strong>Reason:</strong> Controls NH3 conversion</p>
+        <p class="impact">Impact: High pH increases NH3 free form</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year2"></span> AquaMonitor — Predictor</p>
+    </div>
+  </footer>
+</body>
+</html>
